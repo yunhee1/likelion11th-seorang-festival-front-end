@@ -1,0 +1,67 @@
+.main-title {
+    width: 65%;
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+.date {
+    width: 50%;
+    margin-bottom: 46px;
+}
+
+.board {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.schedule-detail {
+    margin-top: 23px;
+}
+
+.content {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    background-color: #FFFFFF7D;
+    padding: 35px 45px;
+    border-radius: 16px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.footer {
+    margin-top: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-container {
+    text-align: center;
+}
+
+.item {
+    background-color: white;
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
