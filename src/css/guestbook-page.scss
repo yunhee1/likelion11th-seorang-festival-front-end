@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Jua";
+    src: url(../fonts/BMJUA_ttf.ttf);
+}
+
+p{
+    margin-bottom:5px;
+    font-family: "Jua";
+    font-size: 16px;
+}
+.content {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 12px;
+    background-color: #FFFFFF7D;
+    padding: 20px 0px;
+    border-radius: 16px;
+}
+
+.memo{
+    margin-bottom:20px;
+}
