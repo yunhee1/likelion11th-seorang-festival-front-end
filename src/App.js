@@ -6,6 +6,7 @@ import DevelopersPage from "./pages/DevelopersPage/DevelopersPage";
 import NbtiPage from "./pages/NbtiPage/NbtiPage";
 import Nav from "./components/Nav";
 import "./css/container.scss";
+import GuestbookPage from "./pages/GuestbookPage/GuestbookPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/booth-map" element={<MapPage />} />
           <Route path="/developers" element={<DevelopersPage />} />
           <Route path="/nbti" element={<NbtiPage />} />
+          <Route path="/guest" element={<GuestbookPage />} />
         </Routes>
       </div>
     </div>

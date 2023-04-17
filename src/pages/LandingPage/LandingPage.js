@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/landing-page.scss";
+import { Link } from "react-router-dom";
 import { ReactComponent as MainTitle } from "../../images/LandingPage/main_title.svg";
 import { ReactComponent as SubTitle } from "../../images/LandingPage/sub_title.svg";
 import { ReactComponent as Date } from "../../images/LandingPage/date.svg";
@@ -21,9 +22,13 @@ const LandingPage = () => {
       <Date className="date" />
 
       <div className="board">
-        <PaperBoard />
+      <Link to="/guest">
+      <PaperBoard />
+      </Link>
         <div className="button-container">
-          <ViewButton />
+        <Link to="/guest">
+        <ViewButton />
+        </Link>
           <WriteButton />
         </div>
       </div>
