@@ -1,6 +1,5 @@
 import React from "react";
 import "../../css/guestbook-page.scss";
-
 import { ReactComponent as PinkMemo } from "../../images/GuestbookPage/PinkMemo.svg";
 import { ReactComponent as BrownMemo } from "../../images/GuestbookPage/BrownMemo.svg";
 import { ReactComponent as GreenMemo } from "../../images/GuestbookPage/GreenMemo.svg";
