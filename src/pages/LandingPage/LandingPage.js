@@ -17,9 +17,11 @@ import { ReactComponent as SwuLogo } from "../../images/LandingPage/likelion_swu
 const LandingPage = () => {
   return (
     <div className="container">
-      <MainTitle className="main-title" />
-      <SubTitle className="sub-title" />
-      <Date className="date" />
+      <div className="title-container">
+        <MainTitle className="main-title" />
+        <SubTitle className="sub-title" />
+        <Date className="date" />
+      </div>
 
       <div className="board">
         <Link to="/guest">

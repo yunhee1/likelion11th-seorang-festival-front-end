@@ -1,6 +1,26 @@
+.title-container {
+    background-image: url("../images/LandingPage/jelly-beans.svg");
+    background-repeat: no-repeat;
+    padding-top: 35px;
+}
+
 .main-title {
     width: 65%;
     margin-bottom: 5px;
+    animation: float 5s ease-in-out infinite;
+}
+
+// float animation
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-8px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 .sub-title {
