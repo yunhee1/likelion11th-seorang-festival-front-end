@@ -17,18 +17,20 @@ import { ReactComponent as SwuLogo } from "../../images/LandingPage/likelion_swu
 const LandingPage = () => {
   return (
     <div className="container">
-      <MainTitle className="main-title" />
-      <SubTitle className="sub-title" />
-      <Date className="date" />
+      <div className="title-container">
+        <MainTitle className="main-title" />
+        <SubTitle className="sub-title" />
+        <Date className="date" />
+      </div>
 
       <div className="board">
-      <Link to="/guest">
-      <PaperBoard />
-      </Link>
-        <div className="button-container">
         <Link to="/guest">
-        <ViewButton />
+          <PaperBoard />
         </Link>
+        <div className="button-container">
+          <Link to="/guest">
+            <ViewButton />
+          </Link>
           <WriteButton />
         </div>
       </div>
@@ -37,7 +39,7 @@ const LandingPage = () => {
         <FootPrint />
         <Introduction />
         <FootPrint />
-        <div className="content">
+        <div className="section-content">
           <p>
             설렘 가득했던 개강, 험난했던 시험 기간을 지나 어느덧 5월, 축제
             기간이 찾아왔습니다
@@ -57,7 +59,7 @@ const LandingPage = () => {
         <FootPrint />
         <Schedule />
         <FootPrint />
-        <div className="content">
+        <div className="section-content">
           <p>5월 23일(수)</p>
           <p>
             20:00 동아리 공연 <br />
@@ -86,7 +88,7 @@ const LandingPage = () => {
         <FootPrint />
         <Developers />
         <FootPrint />
-        <div className="content">
+        <div className="section-content">
           <SwuLogo />
           <p>
             서울여자대학교 웹개발 동아리 <br />
