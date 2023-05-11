@@ -4,7 +4,6 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import MapPage from "./pages/MapPage/MapPage";
 import DevelopersPage from "./pages/DevelopersPage/DevelopersPage";
 import NbtiPage from "./pages/NbtiPage/NbtiPage";
-import Nav from "./components/Nav";
 import "./css/container.scss";
 import GuestbookPage from "./pages/GuestbookPage/GuestbookPage";
 
@@ -12,7 +11,6 @@ function App() {
   return (
     <div className="background">
       <div className="app-container">
-        <Nav />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/booth-map" element={<MapPage />} />

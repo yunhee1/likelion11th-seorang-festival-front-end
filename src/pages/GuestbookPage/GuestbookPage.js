@@ -4,12 +4,14 @@ import { ReactComponent as PinkMemo } from "../../images/GuestbookPage/PinkMemo.
 import { ReactComponent as BrownMemo } from "../../images/GuestbookPage/BrownMemo.svg";
 import { ReactComponent as GreenMemo } from "../../images/GuestbookPage/GreenMemo.svg";
 import { ReactComponent as YellowMemo } from "../../images/GuestbookPage/YellowMemo.svg";
+import Nav from "../../components/Nav";
 
 const GuestbookPage = () => {
   let visitnum = 10;
 
   return (
     <div className="container">
+      <Nav location="guestbook" />
       <p> 지금까지 {visitnum} 발자국이 찍혔어요! </p>
       <div className="content">
         <div className="memo">
