@@ -12,11 +12,15 @@ import { ReactComponent as Schedule } from "../../images/LandingPage/section02_t
 import { ReactComponent as Developers } from "../../images/LandingPage/section03_title.svg";
 import { ReactComponent as FootPrint } from "../../images/LandingPage/footprint.svg";
 import { ReactComponent as ScheduleDetail } from "../../images/LandingPage/schedule_detail.svg";
-import { ReactComponent as SwuLogo } from "../../images/LandingPage/likelion_swu_logo.svg";
+import { ReactComponent as InstagramLogo } from "../../images/LandingPage/instagram_logo.svg";
+import { ReactComponent as SwuLogo } from "../../images/LandingPage/swu_likelion_logo.svg";
+import { ReactComponent as HomepageLogo } from "../../images/LandingPage/likelion_logo.svg";
+import Nav from "../../components/Nav";
 
 const LandingPage = () => {
   return (
     <div className="container">
+      <Nav location="home" />
       <div className="title-container">
         <MainTitle className="main-title" />
         <SubTitle className="sub-title" />
@@ -82,37 +86,43 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <ScheduleDetail className="schedule-detail" />
+      <a href="#">
+        <ScheduleDetail className="schedule-detail" />
+      </a>
 
       <div className="section">
         <FootPrint />
         <Developers />
         <FootPrint />
         <div className="section-content">
-          <SwuLogo />
-          <p>
+          <SwuLogo className="logo-img" />
+          <p className="likelion-title-text">
             서울여자대학교 웹개발 동아리 <br />
             멋쟁이사자처럼 11기
           </p>
           <p>
-            디자인 - 박채연, 허지윤 <br />
-            프론트엔드 - 채유빈, 황윤희 <br />
-            백엔드 - 장효선, 홍정민
+            <span className="track">디자인</span>박채연, 허지윤 <br />
+            <span className="track">프론트엔드</span>채유빈, 황윤희 <br />
+            <span className="track">백엔드</span>장효선, 홍정민
           </p>
         </div>
       </div>
 
       <div className="footer">
         <div className="item-container">
-          <div className="item" />
-          <p>
+          <a href="https://www.instagram.com/likelion_swu/">
+            <InstagramLogo className="item" />
+          </a>
+          <p className="footer-text">
             멋사 <br />
             인스타그램
           </p>
         </div>
         <div className="item-container">
-          <div className="item" />
-          <p>
+          <a href="#">
+            <HomepageLogo className="item" />
+          </a>
+          <p className="footer-text">
             멋사 <br />
             홈페이지
           </p>
