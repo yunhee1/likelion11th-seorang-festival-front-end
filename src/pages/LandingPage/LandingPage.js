@@ -86,9 +86,9 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <a href="#">
-        <ScheduleDetail className="schedule-detail" />
-      </a>
+      {/* <a href="#"> */}
+      <ScheduleDetail className="schedule-detail" />
+      {/* </a> */}
 
       <div className="section">
         <FootPrint />
@@ -119,9 +119,9 @@ const LandingPage = () => {
           </p>
         </div>
         <div className="item-container">
-          <a href="#">
-            <HomepageLogo className="item" />
-          </a>
+          {/* <a href="#"> */}
+          <HomepageLogo className="item" />
+          {/* </a> */}
           <p className="footer-text">
             멋사 <br />
             홈페이지
