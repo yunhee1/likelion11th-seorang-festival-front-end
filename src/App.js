@@ -20,7 +20,7 @@ function App() {
           <Route path="/nbti" element={<NbtiPage />} />
           <Route path="/guest" element={<GuestbookPage />} />
           <Route path="/nbti/test" element={<NbtiTestPage />} />
-          <Route path="/nbti/result" element={<NbtiResult />} />
+          <Route path="/nbti/test/result" element={<NbtiResult />} />
         </Routes>
       </div>
     </div>

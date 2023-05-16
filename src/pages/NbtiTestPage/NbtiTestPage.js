@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as BackButton } from "../../images/NbtiTestPage/back_button.svg";
-import questions from "./NbtiQuestion";
+import questions from "./NbtiQuestionData";
 import "../../css/nbti-test-page.scss";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import { ReactComponent as TopLogo } from "../../images/NbtiTestPage/nbti_top_logo.svg";
@@ -13,20 +13,21 @@ const NbtiTestPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const len = searchParams.get("res")?.length ?? 0;
-    setResult(searchParams.get("res")?.split("") ?? []);
+    const len = searchParams.get("result")?.length ?? 0;
+    setResult(searchParams.get("result")?.split("") ?? []);
 
     if (len < 11) {
-      setQuestionId(searchParams.get("res")?.length ?? 0);
+      setQuestionId(searchParams.get("result")?.length ?? 0);
     } else {
       navigate("/nbti/test/result?" + searchParams.toString());
+      console.log(searchParams.toString());
     }
-  }, [searchParams]);
+  }, [searchParams, navigate]);
 
   const onClick = (type) => {
     const res = [...result, type];
     setResult(res);
-    searchParams.set("res", res.join(""));
+    searchParams.set("result", res.join(""));
     setSearchParams(searchParams);
   };
 

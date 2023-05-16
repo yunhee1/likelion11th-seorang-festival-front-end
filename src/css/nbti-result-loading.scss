@@ -1,0 +1,41 @@
+.loading-container {
+    margin-top: 164px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 337px;
+    height: 337px;
+    background: rgba(255, 250, 234, 0.8);
+    border-radius: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text {
+    font-size: 15px;
+    line-height: 0.5rem;
+    margin-top: 20px;
+    margin-bottom: 33px;
+    color: #727272;
+}
+
+.indicator {
+    padding-right: 15px;
+    visibility: hidden;
+}
+
+.indicator:last-child {
+    padding-right: 0;
+}
+
+.loading1 {
+    visibility: visible;
+}
+
+.loading2 {
+    visibility: visible;
+}
+
+.loading3 {
+    visibility: visible;
+}

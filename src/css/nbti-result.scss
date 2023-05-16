@@ -1,0 +1,136 @@
+.result-container {
+    margin: 13px 18px 20px 18px;
+    background: rgba(255, 255, 255, 0.49);
+    border-radius: 42px;
+    height: 540px;
+    padding: 20px 32px;
+}
+
+.result-text {
+    color: #727272;
+    font-size: 20px;
+    margin: 0;
+}
+
+.result-text-title {
+    color: #727272;
+    font-size: 50px;
+    margin: 10px 0 0 0;
+}
+
+.buttons-container {
+    margin-left: 18px;
+    margin-right: 18px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.result-button {
+    cursor: pointer;
+}
+
+.feature-container {
+    box-sizing: border-box;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    position: relative;
+    padding: 13px;
+    
+    p {
+        color: #515151;
+        margin: 0;
+    }
+
+    &.id0 {
+        background-color: #E6F3A5;
+    }
+
+    &.id1 {
+        background-color: #FAD593;
+    }
+
+    &.id2 {
+        background-color: #FFB8A9;
+    }
+
+    &.id3 {
+        background-color: #B3DCED;
+    }
+
+    &.id4 {
+        background-color: #E5DCFF;
+    }
+
+    &.id5 {
+        background-color: #D3CBB7;
+    }
+
+    &.feature1 {
+        width: 148px;
+        height: 50px;
+    }
+
+    &.feature2 {
+        width: 120px;
+        height: 79px;
+        top: 15px;
+    }
+
+    &.feature3 {
+        width: 120px;
+        height: 51px;
+        top: 30px;
+    }
+
+    &.feature4 {
+        width: 126px;
+        height: 90px;
+        left: 168px;
+        top: -180px;
+    }
+
+    &.feature5 {
+        width: 156px;
+        height: 106px;
+        left: 138px;
+        top: -166px;
+    }
+}
+
+@mixin result-image($id) {
+    margin: 26px auto;
+    width: 234px;
+    height: 179px;
+    background: url("../images/NbtiResultPage/result-image" + $id + ".svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.result-image {
+    &.id0 {
+        @include result-image(0);
+    }
+
+    // &.id1 {
+    //     @include result-image(1);
+    // }
+
+    // &.id2 {
+    //     @include result-image(2);
+    // }
+
+    // &.id3 {
+    //     @include result-image(3);
+    // }
+
+    // &.id4 {
+    //     @include result-image(4);
+    // }
+
+    // &.id5 {
+    //     @include result-image(5);
+    // }
+}
