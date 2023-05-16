@@ -1,0 +1,129 @@
+.top-logo {
+    flex-grow: 1;
+}
+
+.background {
+    padding-top: 10px;
+}
+
+.top-nav {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.empty {
+    flex-grow: 0.5;
+}
+
+.back-button {
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+.test-question-container {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 353px;
+    height: 210px;
+    background-image: url("../images/NbtiTestPage/speech_bubble_background.svg");
+    background-repeat: no-repeat;
+
+    .question-text-container {
+        width: 200px;
+        height: 120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        padding-right: 5px;
+
+        .question-text {
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+}
+
+@mixin illust($number) {
+    margin: 0 auto;
+    width: 150px;
+    height: 90px;
+    background: url("../images/NbtiTestPage/q" + $number + "_illust.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.question-illust {
+    &.q1 {
+        @include illust(1);
+    }
+
+    &.q2 {
+        @include illust(2);
+    }
+
+    // &.q3 {
+    //     @include illust(3);
+    // }
+
+    &.q4 {
+        @include illust(4);
+    }
+
+    // &.q5 {
+    //     @include illust(5);
+    // }
+
+    // &.q6 {
+    //     @include illust(6);
+    // }
+
+    &.q7 {
+        @include illust(7);
+    }
+
+    &.q8 {
+        @include illust(8);
+    }
+
+    &.q9 {
+        @include illust(9);
+    }
+
+    // &.q10 {
+    //     @include illust(10);
+    // }
+
+    // &.q11 {
+    //     @include illust(11);
+    // }
+}
+
+.answer-container {
+    margin-top: 50px;
+
+    .answer {
+        margin: 23px 30px 0px 30px;
+        padding: 45px 40px;
+        background-color: #FFFAEA;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        font-size: 16px;
+
+        &:active {
+            background-color: #FFDF96;
+        }
+    }
+}
+
+.question-count {
+    display: inline-block;
+    padding: 3px 12px;
+    margin-top: 50px;
+    background-color: #FFFAEA;
+    border-radius: 16px;
+}
