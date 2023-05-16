@@ -7,7 +7,7 @@ import classNames from "classnames";
 import Nav from "../../components/Nav";
 import { ReactComponent as Restart } from "../../images/NbtiResultPage/test_restart.svg";
 import { ReactComponent as Sharing } from "../../images/NbtiResultPage/result_sharing.svg";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLocation } from "react-router-dom";
 import Result from "../NbtiTestPage/NbtiResultData";
 
 const NbtiResult = () => {
@@ -20,8 +20,6 @@ const NbtiResult = () => {
   // eslint-disable-next-line no-unused-vars
   const [searchParams, setSearchParams] = useSearchParams();
   const params = searchParams.get("result");
-
-  console.log(params);
 
   const [result, setResult] = useState();
 
@@ -78,6 +76,19 @@ const NbtiResult = () => {
     }, 1000);
   }, [params]);
 
+  const location = useLocation();
+
+  const baseUrl = "baseurl"; // 추후 수정 필요
+
+  const handleCopyClipBoard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert("공유 링크가 복사되었습니다!");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return loading ? (
     <div className="container">
       <div className="loading-container">
@@ -130,7 +141,10 @@ const NbtiResult = () => {
         <Link to="/nbti/test">
           <Restart className="result-button" />
         </Link>
-        <Sharing className="result-button" />
+        <Sharing
+          className="result-button"
+          onClick={() => handleCopyClipBoard(`${baseUrl}${location.pathname}`)}
+        />
       </div>
     </div>
   );
