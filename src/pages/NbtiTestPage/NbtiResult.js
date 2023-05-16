@@ -17,6 +17,7 @@ const NbtiResult = () => {
   const [loading2, setLoading2] = useState(false);
   const [loading3, setLoading3] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const [searchParams, setSearchParams] = useSearchParams();
   const params = searchParams.get("result");
 
@@ -75,7 +76,7 @@ const NbtiResult = () => {
         }, 1000);
       }, 1000);
     }, 1000);
-  }, []);
+  }, [params]);
 
   return loading ? (
     <div className="container">
