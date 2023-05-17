@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Noto Sans KR";
+    src: url(../fonts/NotoSansKR-Regular.otf);
+}
+
+.likelion-swu-logo {
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.contents-container {
+    background-color: #FFFBEE;
+    border-radius: 16px;
+    margin-left: 28px;
+    margin-right: 28px;
+    padding: 60px 60px 30px 60px;
+    position: relative;
+    top: -55px;
+}
+
+span, .title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #603F2A;
+    line-height: 22px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Noto Sans KR";
+}
+
+.likelion-swu-desc {
+    margin-top: 60px;
+    margin-bottom: 90px;
+
+    .double-quote:first-child {
+        display: flex;
+    }
+
+    .double-quote:last-child {
+        float: right;
+    }
+}
+
+.simple-description {
+    margin: 16px auto;
+    font-family: "Noto Sans KR";
+    font-weight: bold;
+    color: #603F2A;
+}
+
+.members-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    p {
+        font-family: "Noto Sans KR";
+        font-weight: bold;
+    }
+}
+
+.team-introduction {
+    margin-bottom: 50px;
+
+}
+
+.contact-us-container {
+    margin-top: 70px;
+}
+
+.footer {
+    margin: 40px auto;
+}
