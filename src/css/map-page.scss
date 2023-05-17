@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.map-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .scroll-container{
     width: 330px; 
     background-color: #FFFFFF7D;
@@ -18,20 +23,21 @@ ul{
     padding:0;
 }
 
-li{
-    background-image: url("../images/MapPage/booth_button.svg");
-    background-repeat:no-repeat;
-    margin: 10px auto;
-    padding: 6px;
-    list-style: none;
-}
+// li{
+//     background-image: url("../images/MapPage/booth_button.svg");
+//     background-repeat:no-repeat;
+//     margin: 10px auto;
+//     padding: 6px;
+//     list-style: none;
+//     cursor: pointer;
+// }
 
-.footicon{
-    float: left;
-    margin-left: 5px;
-    margin-top: 5px;
-}
+// .footicon{
+//     float: left;
+//     margin-left: 5px;
+//     margin-top: 5px;
+// }
 
-p .booth-name{
-    margin: 0px 0px 0px 0px;
-}
+// p .booth-name{
+//     margin: 0px 0px 0px 0px;
+// }
