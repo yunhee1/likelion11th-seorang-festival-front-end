@@ -1,0 +1,81 @@
+.booth-container {
+    margin-bottom: 13px;
+}
+
+.booth-name-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 293px;
+    height: 47px;
+    background-image: url("../images/MapPage/booth_button.svg");
+    background-repeat:no-repeat;
+    margin: 0 auto;
+    padding: 6px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.booth-name {
+    margin: 0;
+    position: relative;
+    right: 8px;
+}
+
+@keyframes description {
+
+}
+.booth-desc-container {
+    box-sizing: border-box;
+    border-radius: 16px;
+    width: 293px;
+    margin: 0 auto;
+    display: none;
+    background-color: #FFF6D6;
+    position: relative;
+    top: -24px;
+    margin-bottom: -24px;
+    cursor: default;
+    padding: 35px 10px 10px 10px;
+
+    &.show {
+        display: block;
+    }
+}
+
+.booth-desc-pin {
+    width: 14px;
+    height: 16px;
+    padding-right: 3px;
+}
+
+.booth-location-container {
+    display: flex;
+
+    p {
+        margin: 0;
+    }
+
+    align-items: center;
+}
+
+.booth-description {
+    text-align: left;
+    padding-left: 2px;
+}
+
+.selected-booth {
+    position: relative;
+    right: 57.5px;
+    opacity: 0;
+
+    &.show {
+        opacity: 100;
+    }
+}
+
+.location-text {
+    padding-top: 3px;
+}
