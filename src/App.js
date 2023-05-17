@@ -6,6 +6,8 @@ import DevelopersPage from "./pages/DevelopersPage/DevelopersPage";
 import NbtiPage from "./pages/NbtiPage/NbtiPage";
 import "./css/container.scss";
 import GuestbookPage from "./pages/GuestbookPage/GuestbookPage";
+import NbtiTestPage from "./pages/NbtiTestPage/NbtiTestPage";
+import NbtiResult from "./pages/NbtiTestPage/NbtiResult";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/developers" element={<DevelopersPage />} />
           <Route path="/nbti" element={<NbtiPage />} />
           <Route path="/guest" element={<GuestbookPage />} />
+          <Route path="/nbti/test" element={<NbtiTestPage />} />
+          <Route path="/nbti/test/result" element={<NbtiResult />} />
         </Routes>
       </div>
     </div>
