@@ -40,6 +40,7 @@ const DeveloperPage = () => {
         </div>
         <section className="team-introduction">
           <img
+            className="depart-img"
             src={require("../../images/DevelopersPage/design_team.png")}
             alt="DESIGN"
           />
@@ -58,6 +59,7 @@ const DeveloperPage = () => {
         </section>
         <section className="team-introduction">
           <img
+            className="depart-img"
             src={require("../../images/DevelopersPage/frontend_team.png")}
             alt="FRONTEND"
           />
@@ -72,6 +74,7 @@ const DeveloperPage = () => {
         </section>
         <section className="team-introduction">
           <img
+            className="depart-img"
             src={require("../../images/DevelopersPage/backend_team.png")}
             alt="BACKEND"
           />
@@ -86,6 +89,7 @@ const DeveloperPage = () => {
         </section>
         <section className="contact-us-container">
           <img
+            className="depart-img"
             src={require("../../images/DevelopersPage/contact_us.png")}
             alt="CONTACT US"
           />
