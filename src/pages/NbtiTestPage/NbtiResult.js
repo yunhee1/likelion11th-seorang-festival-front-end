@@ -26,50 +26,48 @@ const NbtiResult = () => {
   // 이게 맞나 ...
   useEffect(() => {
     setTimeout(() => {
+      setLoading1(true);
+
       setTimeout(() => {
-        setLoading1(true);
+        setLoading2(true);
 
         setTimeout(() => {
-          setLoading2(true);
+          setLoading3(true);
 
           setTimeout(() => {
-            setLoading3(true);
+            // 정답 계산
+            const num = params.split("").filter((v) => v === "0").length;
 
-            setTimeout(() => {
-              // 정답 계산
-              const num = params.split("").filter((v) => v === "0").length;
+            switch (num) {
+              case 10:
+              case 11:
+                setResult(0);
+                break;
+              case 6:
+              case 7:
+                setResult(1);
+                break;
+              case 8:
+              case 9:
+                setResult(2);
+                break;
+              case 5:
+              case 4:
+                setResult(3);
+                break;
+              case 3:
+              case 2:
+                setResult(4);
+                break;
+              case 1:
+              case 0:
+                setResult(5);
+                break;
+              default:
+                console.log("오류");
+            }
 
-              switch (num) {
-                case 10:
-                case 11:
-                  setResult(0);
-                  break;
-                case 6:
-                case 7:
-                  setResult(1);
-                  break;
-                case 8:
-                case 9:
-                  setResult(2);
-                  break;
-                case 5:
-                case 4:
-                  setResult(3);
-                  break;
-                case 3:
-                case 2:
-                  setResult(4);
-                  break;
-                case 1:
-                case 0:
-                  setResult(5);
-                  break;
-                default:
-                  console.log("오류");
-              }
-
-              setLoading(false);
-            }, 1000);
+            setLoading(false);
           }, 1000);
         }, 1000);
       }, 1000);
@@ -92,7 +90,7 @@ const NbtiResult = () => {
   return loading ? (
     <div className="container">
       <div className="loading-container">
-        <div>
+        <div className="loading-transition">
           <Cat />
           <div className="loading-text">
             <p>곧 결과가 나온다냥</p>
@@ -143,7 +141,11 @@ const NbtiResult = () => {
         </Link>
         <Sharing
           className="result-button"
-          onClick={() => handleCopyClipBoard(`${baseUrl}${location.pathname}`)}
+          onClick={() =>
+            handleCopyClipBoard(
+              `${baseUrl}${location.pathname}${location.search}`
+            )
+          }
         />
       </div>
     </div>
