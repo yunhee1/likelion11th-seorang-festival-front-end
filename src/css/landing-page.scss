@@ -57,25 +57,36 @@
         border-radius: 16px;
         line-height: 1.5rem;
 
+        .section-content-wrapper {
+            margin-bottom: 40px;
+
+            .date-container {
+                background-color: #FFF6D6;
+                border-radius: 16px;
+                padding: 5px 15px 3px 15px;
+                text-shadow: none;
+                color: black;
+                font-family: "Jua";
+                font-weight: normal;
+            }
+
+            .timetable-content {
+                margin-bottom: 30px;
+                margin-top: 25px;
+            }
+        }
         .likelion-title-text {
             margin-bottom: 25px;
         }
     }
 }
 
-.schedule-detail {
-    margin-top: 23px;
-}
-
-
 p {
     font-size: 15px;
 }
 
-.footer {
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-right: 60px;
+.main-footer {
+    margin: 40px 0 20px 0;
     display: flex;
     justify-content: space-evenly;
 }
@@ -83,9 +94,9 @@ p {
 .item-container {
     text-align: center;
     
-    .item {
-        width: 60px;
-        height: 60px;
+    .item-logo {
+        width: 55px;
+        height: 55px;
         margin: 0 auto;
     }
 }
@@ -98,11 +109,5 @@ p {
 .footer-text {
     font-size: 14px;
     color: #727272;
-}
-
-.track {
-    background-color: #FFF6D6;
-    border-radius: 16px;
-    padding: 2px 10px;
-    margin-right: 20px;
+    line-height: 1rem;
 }

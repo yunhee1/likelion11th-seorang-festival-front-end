@@ -11,7 +11,6 @@ import { ReactComponent as Introduction } from "../../images/LandingPage/section
 import { ReactComponent as Schedule } from "../../images/LandingPage/section02_title.svg";
 import { ReactComponent as Developers } from "../../images/LandingPage/section03_title.svg";
 import { ReactComponent as FootPrint } from "../../images/LandingPage/footprint.svg";
-import { ReactComponent as ScheduleDetail } from "../../images/LandingPage/schedule_detail.svg";
 import { ReactComponent as InstagramLogo } from "../../images/LandingPage/instagram_logo.svg";
 import { ReactComponent as SwuLogo } from "../../images/LandingPage/swu_likelion_logo.svg";
 import { ReactComponent as HomepageLogo } from "../../images/LandingPage/likelion_logo.svg";
@@ -64,31 +63,69 @@ const LandingPage = () => {
         <Schedule />
         <FootPrint />
         <div className="section-content">
-          <p>5월 23일(수)</p>
-          <p>
-            20:00 동아리 공연 <br />
-            21:00 박채연 공연
-          </p>
-
-          <br />
-          <p>5월 24일(목)</p>
-          <p>
-            20:00 동아리 공연 <br />
-            21:00 허지윤 공연
-          </p>
-
-          <br />
-          <p>5월 25일(금)</p>
-          <p>
-            20:00 동아리 공연 <br />
-            21:00 멋쟁이 사자처럼 공연
-          </p>
+          <div className="section-content-wrapper">
+            <span className="date-container">상시</span>
+            <p className="timetable-content">
+              포토존(포토부스, 포토월) &lt;re:cord&gt; <br />
+              휴식존 &lt;re:lax&gt;
+              <br />
+              예술전 &lt;[ ], 하겠습니다.&gt;
+            </p>
+          </div>
+          <div className="section-content-wrapper">
+            <span className="date-container">5월 23일(수)</span>
+            <p className="timetable-content">
+              11:00-17:00 <br />
+              플리마켓 &lt;pleasu:re&gt; <br />
+              오프라인 부스 &lt;re:member&gt;
+            </p>
+            <p className="timetable-content">
+              11:00-21:00 <br />
+              푸드트럭 &lt;re:cipe&gt;
+            </p>
+            <p className="timetable-content">
+              18:30-21:30 <br />
+              학우 버스킹
+              <br />
+              동아리(밴드) 및 아티스트 공연 &lt;re:prise&gt;
+            </p>
+            <p>*아티스트 라인업: 안예은</p>
+          </div>
+          <div className="section-content-wrapper">
+            <span className="date-container">5월 24일(목)</span>
+            <p className="timetable-content">
+              11:00-17:00 <br />
+              플리마켓 &lt;pleasu:re&gt; <br />
+              오프라인 부스 &lt;re:member&gt;
+            </p>
+            <p className="timetable-content">
+              11:00-21:00 <br />
+              푸드트럭 &lt;re:cipe&gt;
+            </p>
+            <p className="timetable-content">
+              18:30-21:30 <br />
+              동아리(댄스) 및 아티스트 공연 &lt;re:prise&gt;
+            </p>
+            <p>*아티스트 라인업: 최예나</p>
+          </div>
+          <div className="section-content-wrapper">
+            <span className="date-container">5월 25일(금)</span>
+            <p className="timetable-content">
+              11:00-17:00 <br />
+              플리마켓 &lt;pleasu:re&gt; <br />
+              오프라인 부스 &lt;re:member&gt;
+            </p>
+            <p className="timetable-content">
+              11:00-21:00 <br />
+              푸드트럭 &lt;re:cipe&gt;
+            </p>
+            <p className="timetable-content">
+              18:00-20:00 <br />
+              토크콘서트 &lt;re:spect&gt;
+            </p>
+          </div>
         </div>
       </div>
-
-      {/* <a href="#"> */}
-      <ScheduleDetail className="schedule-detail" />
-      {/* </a> */}
 
       <div className="section">
         <FootPrint />
@@ -97,35 +134,30 @@ const LandingPage = () => {
         <div className="section-content">
           <SwuLogo className="logo-img" />
           <p className="likelion-title-text">
-            서울여자대학교 웹개발 동아리 <br />
-            멋쟁이사자처럼 11기
+            서울여자대학교 개발 동아리 <br />
+            멋쟁이사자처럼
           </p>
-          <p>
-            <span className="track">디자인</span>박채연, 허지윤 <br />
-            <span className="track">프론트엔드</span>채유빈, 황윤희 <br />
-            <span className="track">백엔드</span>장효선, 홍정민
-          </p>
-        </div>
-      </div>
 
-      <div className="footer">
-        <div className="item-container">
-          <a href="https://www.instagram.com/likelion_swu/">
-            <InstagramLogo className="item" />
-          </a>
-          <p className="footer-text">
-            멋사 <br />
-            인스타그램
-          </p>
-        </div>
-        <div className="item-container">
-          {/* <a href="#"> */}
-          <HomepageLogo className="item" />
-          {/* </a> */}
-          <p className="footer-text">
-            멋사 <br />
-            홈페이지
-          </p>
+          <div className="main-footer">
+            <div className="item-container">
+              <a href="https://www.instagram.com/likelion_swu/">
+                <InstagramLogo className="item-logo" />
+              </a>
+              <p className="footer-text">
+                멋쟁이 사자처럼 <br />
+                Instagram
+              </p>
+            </div>
+            <div className="item-container">
+              <a href="https://swulikelion.oopy.io/">
+                <HomepageLogo className="item-logo" />
+              </a>
+              <p className="footer-text">
+                멋쟁이 사자처럼 <br />
+                Homepage
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
