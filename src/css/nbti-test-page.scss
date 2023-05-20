@@ -24,10 +24,9 @@
 
 .test-question-container {
     margin: 0 auto;
-    margin-top: 20px;
     width: 353px;
     height: 210px;
-    background-image: url("../images/NbtiTestPage/speech_bubble_background.svg");
+    background-image: url("../images/NbtiTestPage/speech_bubble_background.png");
     background-repeat: no-repeat;
 
     .question-text-container {
@@ -51,9 +50,10 @@
     margin: 0 auto;
     width: 150px;
     height: 90px;
-    background: url("../images/NbtiTestPage/q" + $number + "_illust.svg");
+    background: url("../images/NbtiTestPage/q" + $number + "_illust.png");
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateY(-30px);
 }
 
 .question-illust {
@@ -65,21 +65,21 @@
         @include illust(2);
     }
 
-    // &.q3 {
-    //     @include illust(3);
-    // }
+    &.q3 {
+        @include illust(3);
+    }
 
     &.q4 {
         @include illust(4);
     }
 
-    // &.q5 {
-    //     @include illust(5);
-    // }
+    &.q5 {
+        @include illust(5);
+    }
 
-    // &.q6 {
-    //     @include illust(6);
-    // }
+    &.q6 {
+        @include illust(6);
+    }
 
     &.q7 {
         @include illust(7);
@@ -93,17 +93,17 @@
         @include illust(9);
     }
 
-    // &.q10 {
-    //     @include illust(10);
-    // }
+    &.q10 {
+        @include illust(10);
+    }
 
-    // &.q11 {
-    //     @include illust(11);
-    // }
+    &.q11 {
+        @include illust(11);
+    }
 }
 
 .answer-container {
-    margin-top: 50px;
+    transform: translateY(-25px);
 
     .answer {
         margin: 23px 30px 0px 30px;
@@ -114,7 +114,13 @@
         transition: background-color 0.2s ease-in-out;
         font-size: 16px;
 
-        &:active, &:hover {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: #FFDF96;
+            }
+        }
+
+        &:active {
             background-color: #FFDF96;
         }
     }
@@ -123,7 +129,7 @@
 .question-count {
     display: inline-block;
     padding: 3px 12px;
-    margin-top: 50px;
+    margin-top: 20px;
     background-color: #FFFAEA;
     border-radius: 16px;
 }
