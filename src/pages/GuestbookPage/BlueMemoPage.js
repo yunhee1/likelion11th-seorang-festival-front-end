@@ -10,7 +10,6 @@ import initialContent from "./Content";
 const BlueMemoPage = () => {
 
   const [inputCount, setInputCount] = useState(0);
-
   const [contents, setContents] = useState(initialContent);
   const [inputText, setInputText] = useState("");
 

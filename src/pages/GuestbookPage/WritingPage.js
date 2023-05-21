@@ -8,8 +8,6 @@ import { ReactComponent as Backbtn } from '../../images/GuestbookPage/backbutton
 import { ReactComponent as WritingTitle } from '../../images/GuestbookPage/writingtitle.svg';
 
 const WritingPage = () => {
-  let letternum = 0;
-
   return (
     <div className="container">
       <div className = 'backbtn-container'>
