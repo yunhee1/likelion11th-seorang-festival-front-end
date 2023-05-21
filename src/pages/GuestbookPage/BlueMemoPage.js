@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import WritingNav from "../../components/WritingNav";
 import ".//../../css/guestbook-page.scss";
 import { Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
 import { ReactComponent as WritingTitle } from '../../images/GuestbookPage/writingtitle.svg';
 import initialContent from "./Content";
-import ContentList from "./ContentList";
 
 const BlueMemoPage = () => {
 
