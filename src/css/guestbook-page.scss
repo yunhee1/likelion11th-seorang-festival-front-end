@@ -11,12 +11,13 @@
 .pink-memo-container{
     margin-left:15px;
     margin-right:15px;
-    background-image: url("../images/GuestbookPage/pinkmemo.svg");
+    background-image: url("../images/GuestbookPage/PinkMemo.svg");
     background-repeat: no-repeat;
     background-size:contain;
     margin-bottom: 20px;
     padding-bottom:15px;
 }
+
 .yellow-memo-container{
     margin-bottom: 10px;
     margin-left:15px;
@@ -24,7 +25,7 @@
     background-image: url("../images/GuestbookPage/YellowMemo.svg");
     background-repeat: no-repeat;
     background-size:contain;
-    // padding-top:15px;
+    margin-top: 18px;
     padding-bottom:15px;
 }
 
@@ -75,6 +76,7 @@
 }
 
 .textbox{
+    padding: 10px;
     margin-top:90px;
     margin-bottom:16px;
     border:none;
@@ -90,6 +92,10 @@
     text-shadow: none;
     letter-spacing: 1px;
     line-height:30px;
+
+    &.top-cat-box {
+        margin-top: 70px;
+    }
 }
 .textbox:focus {
     outline: none;
@@ -111,8 +117,11 @@
 }
 
 .btn-container{
-    margin-top: 50px;
     border-radius:30%;
+}
+
+.nav-item {
+    height: 60px;
 }
 
 .writing-nav-container{
@@ -120,7 +129,7 @@
     justify-content: space-evenly;
     align-items: flex-end;
     margin-top:20px;
-    margin-bottom: 30px;
+    margin-bottom: 0x;
 }
 
 .guide-content {
@@ -153,7 +162,17 @@ h2{
             text-shadow: none;
             letter-spacing: 1px;
         }
-}
+    }   
+
+    &.top-cat {
+        position: relative;
+        top: -30px;
+    }
+
+    &.middle-cat {
+        position: relative;
+        top: -20px;
+    }
 }
 
 //포스트잇

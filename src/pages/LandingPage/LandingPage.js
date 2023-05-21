@@ -34,7 +34,9 @@ const LandingPage = () => {
           <Link to="/guest">
             <ViewButton />
           </Link>
-          <WriteButton />
+          <Link to="/writing">
+            <WriteButton />
+          </Link>
         </div>
       </div>
 
