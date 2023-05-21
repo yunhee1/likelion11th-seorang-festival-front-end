@@ -3,20 +3,191 @@
     src: url(../fonts/BMJUA_ttf.ttf);
 }
 
-p{
-    margin-bottom:5px;
-    font-family: "Jua";
-    font-size: 16px;
+.container{
+    margin: 0 auto;
+    height: 100%;
 }
-.content {
+
+.pink-memo-container{
+    margin-left:15px;
+    margin-right:15px;
+    background-image: url("../images/GuestbookPage/pinkmemo.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-bottom: 20px;
+    padding-bottom:15px;
+}
+.yellow-memo-container{
+    margin-bottom: 10px;
+    margin-left:15px;
+    margin-right:15px;
+    background-image: url("../images/GuestbookPage/YellowMemo.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    // padding-top:15px;
+    padding-bottom:15px;
+}
+
+.green-memo-container{
+    margin-left:15px;
+    margin-right:15px;
+    background-image: url("../images/GuestbookPage/GreenMemo.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-bottom: 10px;
+    padding-bottom:15px;
+}
+
+.blue-memo-container{
+    margin-left:15px;
+    margin-right:15px;
+    background-image: url("../images/GuestbookPage/bluememo.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-bottom: 20px;
+    padding-bottom:15px;
+}
+
+.purple-memo-container{
+    margin-left:15px;
+    margin-right:15px;
+    background-image: url("../images/GuestbookPage/purplememo.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-bottom: 20px;
+    padding-bottom:15px;
+}
+
+.brown-memo-container{
+    margin-left:15px;
+    margin-right:15px;
+    background-image: url("../images/GuestbookPage/BrownMemo.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-bottom: 20px;
+    padding-bottom:15px;
+}
+
+.backbtn-container{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.textbox{
+    margin-top:90px;
+    margin-bottom:16px;
+    border:none;
+    background-color:#FFF6F1;
+    width:300px;
+    height: 220px;
+    resize: none;
+    border-radius: 20px;
+
+    font-family: "Jua";
+    font-size: 18px;
+    color: #000000;
+    text-shadow: none;
+    letter-spacing: 1px;
+    line-height:30px;
+}
+.textbox:focus {
+    outline: none;
+  }
+
+.content-container {
+    position:relative;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 12px;
     background-color: #FFFFFF7D;
     padding: 20px 0px;
     border-radius: 16px;
+    min-height: 90vh;
 }
 
 .memo{
     margin-bottom:20px;
+}
+
+.btn-container{
+    margin-top: 50px;
+    border-radius:30%;
+}
+
+.writing-nav-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+
+.guide-content {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 40%;
+    margin-bottom: 100%;
+    padding: 20px 0px;
+}
+
+h2{
+    font-family: "Jua";
+    font-size: 20px;
+    color: #727272;
+    letter-spacing: 2px;
+}
+
+.memo{
+    width : 350px; 
+    height : 350px;
+}
+
+.textlength{
+    .contentlength{
+        padding-top:10px;
+        span{
+            font-family: "Jua";
+            font-size: 16px;
+            color: #727272;
+            text-shadow: none;
+            letter-spacing: 1px;
+        }
+}
+}
+
+//포스트잇
+li{
+    background-color:#FFD9EB;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left: 15px;
+    margin-right:24px;
+    margin-bottom:30px;
+    border-radius: 10px;
+    list-style: none;
+    font-family: "Jua";
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+}s
+
+// .container {
+//     p .guest-title {
+//         font-family: "Jua";
+//         color: #000000;
+//         letter-spacing: 1px;
+//     }
+// }
+
+//게시물 추가 버튼
+.plusbtn{
+    position:fixed;
+    right:10px;
+}
+
+//버튼 기본스타일 지움(전역으로)
+button{
+    border:none;
+    background: none;
 }
