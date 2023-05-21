@@ -4,7 +4,7 @@ import ".//../../css/guestbook-page.scss";
 import { Link } from "react-router-dom";
 import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton.svg";
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
-import { ReactComponent as WritingTitle } from '../../images/GuestbookPage/writingtitle.svg';
+import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
 import initialContent from "./Content";
 import ContentList from "./ContentList";
 
@@ -18,14 +18,14 @@ const YellowMemoPage = () => {
     const newContent = {
       id: contents.length + 1,
       text: inputText,
-      color: 'yellow',
+      color: "yellow",
     };
 
     setContents([...contents, newContent]);
-    setInputText('');
+    setInputText("");
   };
 
-  const onChangeHandler = e => {
+  const onChangeHandler = (e) => {
     setInputCount(e.target.value.length);
     setInputText(e.target.value);
   };
@@ -42,16 +42,15 @@ const YellowMemoPage = () => {
       </div>
       <WritingNav location="yellowmemo" />
       <div className="yellow-memo-container">
-
         <textarea
           onChange={onChangeHandler}
-          className="textbox"
+          className="textbox top-cat-box"
           maxLength={100}
           id="inputText"
           value={inputText}
         ></textarea>
 
-        <div className="textlength">
+        <div className="textlength top-cat">
           <p className="contentlength">
             <span>{inputCount}</span>
             <span>/100</span>
@@ -66,10 +65,8 @@ const YellowMemoPage = () => {
           </Link>
         </button>
       </div>
-
     </div>
   );
 };
 
 export default YellowMemoPage;
-

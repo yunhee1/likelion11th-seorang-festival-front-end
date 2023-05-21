@@ -4,7 +4,7 @@ import ".//../../css/guestbook-page.scss";
 import { Link } from "react-router-dom";
 import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton.svg";
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
-import { ReactComponent as WritingTitle } from '../../images/GuestbookPage/writingtitle.svg';
+import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
 import initialContent from "./Content";
 
 const PurpleMemoPage = () => {
@@ -17,14 +17,14 @@ const PurpleMemoPage = () => {
     const newContent = {
       id: contents.length + 1,
       text: inputText,
-      color: 'purple',
+      color: "purple",
     };
 
     setContents([...contents, newContent]);
-    setInputText('');
+    setInputText("");
   };
 
-  const onChangeHandler = e => {
+  const onChangeHandler = (e) => {
     setInputCount(e.target.value.length);
     setInputText(e.target.value);
   };
@@ -45,7 +45,6 @@ const PurpleMemoPage = () => {
       </div>
       <WritingNav location="purplememo" />
       <div className="purple-memo-container">
-
         <textarea
           onChange={onChangeHandler}
           className="textbox"
@@ -54,7 +53,7 @@ const PurpleMemoPage = () => {
           value={inputText}
         ></textarea>
 
-        <div className="textlength">
+        <div className="textlength middle-cat">
           <p className="contentlength">
             <span>{inputCount}</span>
             <span>/100</span>
@@ -69,10 +68,8 @@ const PurpleMemoPage = () => {
           </Link>
         </button>
       </div>
-
     </div>
   );
 };
 
 export default PurpleMemoPage;
-

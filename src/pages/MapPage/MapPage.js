@@ -44,7 +44,7 @@ const MapPage = () => {
     <div className="container">
       <Nav location="map" />
       <div className="map-container">
-        <BoothMap class="booth-map-img" />
+        <BoothMap className="booth-map-img" />
       </div>
       <div className="scroll-container">
         <div className="day-filter-container">

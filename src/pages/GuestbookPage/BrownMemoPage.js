@@ -4,11 +4,10 @@ import ".//../../css/guestbook-page.scss";
 import { Link } from "react-router-dom";
 import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton.svg";
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
-import { ReactComponent as WritingTitle } from '../../images/GuestbookPage/writingtitle.svg';
+import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
 import initialContent from "./Content";
 
 const BrownMemoPage = () => {
-
   const [inputCount, setInputCount] = useState(0);
   const [contents, setContents] = useState(initialContent);
   const [inputText, setInputText] = useState("");
@@ -17,14 +16,14 @@ const BrownMemoPage = () => {
     const newContent = {
       id: contents.length + 1,
       text: inputText,
-      color: 'brown',
+      color: "brown",
     };
 
     setContents([...contents, newContent]);
-    setInputText('');
+    setInputText("");
   };
 
-  const onChangeHandler = e => {
+  const onChangeHandler = (e) => {
     setInputCount(e.target.value.length);
     setInputText(e.target.value);
   };
@@ -41,16 +40,15 @@ const BrownMemoPage = () => {
       </div>
       <WritingNav location="brownmemo" />
       <div className="brown-memo-container">
-
         <textarea
           onChange={onChangeHandler}
-          className="textbox"
+          className="textbox top-cat-box"
           maxLength={100}
           id="inputText"
           value={inputText}
         ></textarea>
 
-        <div className="textlength">
+        <div className="textlength top-cat">
           <p className="contentlength">
             <span>{inputCount}</span>
             <span>/100</span>
@@ -65,10 +63,8 @@ const BrownMemoPage = () => {
           </Link>
         </button>
       </div>
-
     </div>
   );
 };
 
 export default BrownMemoPage;
-
