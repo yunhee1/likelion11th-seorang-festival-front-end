@@ -149,7 +149,11 @@ const LandingPage = () => {
               </p>
             </div>
             <div className="item-container">
-              <a href="https://swulikelion.oopy.io/">
+              <a
+                href="https://swulikelion.oopy.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <HomepageLogo className="item-logo" />
               </a>
               <p className="footer-text">

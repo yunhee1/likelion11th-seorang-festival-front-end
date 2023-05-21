@@ -40,30 +40,26 @@ const DeveloperPage = () => {
         </div>
         <section className="team-introduction">
           <img
-            className="depart-img"
+            className="depart-img design"
             src={require("../../images/DevelopersPage/design_team.png")}
             alt="DESIGN"
           />
           <div className="members-container">
             <div>
               <p className="member-name">박채연</p>
-              {/* <p className="major">디지털미디어학과</p>
-              <p className="role">디자인</p> */}
             </div>
             <div>
               <p className="member-name">허지윤</p>
-              {/* <p className="major">디지털미디어학과</p>
-              <p className="role">디자인</p> */}
             </div>
           </div>
         </section>
         <section className="team-introduction">
           <img
-            className="depart-img"
+            className="depart-img frontend"
             src={require("../../images/DevelopersPage/frontend_team.png")}
             alt="FRONTEND"
           />
-          <div className="members-container">
+          <div className="members-container backend">
             <div>
               <p className="member-name">채유빈</p>
             </div>
@@ -89,12 +85,12 @@ const DeveloperPage = () => {
         </section>
         <section className="contact-us-container">
           <img
-            className="depart-img"
+            className="depart-img contact"
             src={require("../../images/DevelopersPage/contact_us.png")}
             alt="CONTACT US"
           />
 
-          <div className="footer">
+          <div className="developers-footer">
             <div className="item-container">
               <a href="https://www.instagram.com/likelion_swu/">
                 <InstagramLogo className="item" />
@@ -105,9 +101,13 @@ const DeveloperPage = () => {
               </p>
             </div>
             <div className="item-container">
-              {/* <a href="#"> */}
-              <HomepageLogo className="item" />
-              {/* </a> */}
+              <a
+                href="https://swulikelion.oopy.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <HomepageLogo className="item" />
+              </a>
               <p className="footer-text">
                 멋사 <br />
                 홈페이지
