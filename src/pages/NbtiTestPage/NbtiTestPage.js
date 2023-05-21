@@ -20,7 +20,6 @@ const NbtiTestPage = () => {
       setQuestionId(searchParams.get("result")?.length ?? 0);
     } else {
       navigate("/nbti/test/result?" + searchParams.toString());
-      console.log(searchParams.toString());
     }
   }, [searchParams, navigate]);
 
