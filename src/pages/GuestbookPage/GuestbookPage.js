@@ -7,13 +7,13 @@ import ContentList from "./ContentList";
 import { Link } from "react-router-dom";
 
 import Nav from "../../components/Nav";
-export function handleAddContent(){};
+export function handleAddContent() {}
 const GuestbookPage = () => {
   const [content, setContent] = useState(initialContent);
   // const [text, setText] = useState("");
   // const [color, setColor] = useState("");
 
-  let visitnum = content.length;
+  let visitNum = content.length;
   // const reverse = ContentList.contents.reverse()
   // const handleAddContent = () => {
   //   const newContent = {
@@ -27,10 +27,10 @@ const GuestbookPage = () => {
   //   setColor("");
   // };
 
-   return (
+  return (
     <div className="container">
       <Nav location="guestbook" />
-      <p className='guest-title'> 지금까지 {visitnum} 발자국이 찍혔어요! </p>
+      <p className="guest-title"> 지금까지 {visitNum} 발자국이 찍혔어요! </p>
       <div className="content-container">
         <div className="memo">
           <div>
@@ -43,7 +43,6 @@ const GuestbookPage = () => {
             <Plusbtn />
           </Link>
         </div>
-        
       </div>
     </div>
   );

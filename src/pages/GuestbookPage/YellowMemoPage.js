@@ -6,7 +6,7 @@ import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
 import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
 import initialContent from "./Content";
-import ContentList from "./ContentList";
+// import ContentList from "./ContentList";
 
 const YellowMemoPage = () => {
   const [inputCount, setInputCount] = useState(0);
