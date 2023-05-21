@@ -9,8 +9,9 @@
     align-items: center;
     width: 293px;
     height: 47px;
-    background-image: url("../images/MapPage/booth_button.svg");
-    background-repeat:no-repeat;
+    background-image: url("../images/MapPage/booth_button.png");
+    object-fit: scale-down;
+    background-repeat: no-repeat;
     margin: 0 auto;
     padding: 6px;
     cursor: pointer;

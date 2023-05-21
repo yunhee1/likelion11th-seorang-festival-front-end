@@ -9,9 +9,8 @@
 }
 
 .scroll-container{
-    width: 330px; 
+    margin: 0 25px 0 25px;
     background-color: #FFFFFF7D;
-    margin: 0 auto;
     padding: 20px 20px;
     border-radius: 16px;
     height : 300px;
@@ -22,22 +21,3 @@ ul{
     margin:0;
     padding:0;
 }
-
-// li{
-//     background-image: url("../images/MapPage/booth_button.svg");
-//     background-repeat:no-repeat;
-//     margin: 10px auto;
-//     padding: 6px;
-//     list-style: none;
-//     cursor: pointer;
-// }
-
-// .footicon{
-//     float: left;
-//     margin-left: 5px;
-//     margin-top: 5px;
-// }
-
-// p .booth-name{
-//     margin: 0px 0px 0px 0px;
-// }
