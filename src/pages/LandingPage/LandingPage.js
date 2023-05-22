@@ -53,7 +53,7 @@ const LandingPage = () => {
           </p>
           <p>
             올해 서랑제는 <br />
-            [Re: record a pice of our youth] <br />
+            [Re: record a piece of our youth] <br />
             우리의 청춘의 한 편을 녹화하자는 메시지를 전하고 있습니다.
           </p>
           <p>
