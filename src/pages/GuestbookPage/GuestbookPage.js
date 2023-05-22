@@ -1,49 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../css/guestbook-page.scss";
-// import { ReactComponent as PinkMemo } from "../../images/GuestbookPage/PinkMemo.svg";
-import { ReactComponent as Plusbtn } from "../../images/GuestbookPage/plus_button.svg";
-import initialContent from "./Content";
 import ContentList from "./ContentList";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 import Nav from "../../components/Nav";
+import plusBtn from "../../images/GuestbookPage/plus_btn.png";
+
 export function handleAddContent() {}
 const GuestbookPage = () => {
-  const [content, setContent] = useState(initialContent);
-  // const [text, setText] = useState("");
-  // const [color, setColor] = useState("");
+  const [content, setContent] = useState();
+  const [visitNum, setVisitNum] = useState();
 
-  let visitNum = content.length;
-  // const reverse = ContentList.contents.reverse()
-  // const handleAddContent = () => {
-  //   const newContent = {
-  //     id: content.length + 1,
-  //     text: text,
-  //     color: color,
-  //   };
+  useEffect(() => {
+    const client = axios.create({
+      method: "get",
+      headers: {
+        "Access-Control-Allow-Origin": `http://localhost:3000/`,
+      },
+    });
 
-  //   setContent([...content, newContent]);
-  //   setText("");
-  //   setColor("");
-  // };
+    client.get("/api/letter").then((res) => {
+      setContent(res.data.letters);
+      setVisitNum(res.data.total);
+    });
+  }, []);
 
   return (
     <div className="container">
       <Nav location="guestbook" />
-      <p className="guest-title"> 지금까지 {visitNum} 발자국이 찍혔어요! </p>
-      <div className="content-container">
-        <div className="memo">
-          <div>
-            <ContentList contents={content} />
+      {content ? (
+        <div className="guestbook-container">
+          <p className="guest-title">지금까지 {visitNum} 발자국이 찍혔어요!</p>
+          <div className="content-container">
+            <div className="memo">
+              <div>
+                <ContentList contents={content} />
+              </div>
+            </div>
+
+            <div>
+              <Link to="/writing">
+                <img
+                  src={plusBtn}
+                  className="plus-btn"
+                  alt="게시글 작성 버튼"
+                />
+              </Link>
+            </div>
           </div>
         </div>
-
-        <div className="plusbtn">
-          <Link to="/writing">
-            <Plusbtn />
-          </Link>
-        </div>
-      </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };

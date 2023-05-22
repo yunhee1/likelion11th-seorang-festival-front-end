@@ -107,13 +107,9 @@
     margin-right: 25px;
     margin-top: 12px;
     background-color: #FFFFFF7D;
-    padding: 20px 0px;
+    padding: 10px 0px;
     border-radius: 16px;
     min-height: 90vh;
-}
-
-.memo{
-    margin-bottom:20px;
 }
 
 .btn-container{
@@ -147,11 +143,6 @@ h2{
     letter-spacing: 2px;
 }
 
-.memo{
-    width : 350px; 
-    height : 350px;
-}
-
 .textlength{
     .contentlength{
         padding-top:10px;
@@ -177,12 +168,13 @@ h2{
 
 //포스트잇
 li{
+    cursor: pointer;
     background-color:#FFD9EB;
-    padding-top:30px;
-    padding-bottom:30px;
-    margin-left: 15px;
-    margin-right:24px;
+    padding: 20px;
+    margin-left: 32px;
+    margin-right:32px;
     margin-bottom:30px;
+    margin-top: 30px;
     border-radius: 10px;
     list-style: none;
     font-family: "Jua";
@@ -191,18 +183,23 @@ li{
     letter-spacing: 1px;
 }s
 
-// .container {
-//     p .guest-title {
-//         font-family: "Jua";
-//         color: #000000;
-//         letter-spacing: 1px;.
-// }
-// }
+.container {
+    p .guest-title {
+        font-family: "Jua";
+        color: #3D1D00;
+        letter-spacing: 1px;
+}
+}
+
+.guestbook-container {
+    margin-top: 37px;
+}
 
 //게시물 추가 버튼
-.plusbtn{
-    position:fixed;
-    right:10px;
+.plus-btn {
+    position: fixed;
+    right: 20px;
+    width: 136px;
 }
 
 //버튼 기본스타일 지움(전역으로)
