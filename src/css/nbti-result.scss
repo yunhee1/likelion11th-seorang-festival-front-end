@@ -13,7 +13,6 @@
     border-radius: 42px;
     height: 500px;
     padding: 20px 32px;
-    
     animation-name: fadeIn;
     animation-duration: 1s;
 }
@@ -27,7 +26,7 @@
 .result-text-title {
     color: #727272;
     font-size: 50px;
-    margin: 10px 0 0 0;
+    margin: 5px 0 5px 0;
 }
 
 .buttons-container {
@@ -124,6 +123,7 @@
     background: url("../images/NbtiResultPage/result_image" + $id + ".png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
 .result-image {
@@ -131,9 +131,9 @@
         @include result-image(0);
     }
 
-    // &.id1 {
-    //     @include result-image(1);
-    // }
+    &.id1 {
+        @include result-image(1);
+    }
 
     &.id2 {
         @include result-image(2);

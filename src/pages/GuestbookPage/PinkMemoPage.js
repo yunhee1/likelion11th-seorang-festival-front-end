@@ -12,19 +12,17 @@ const PinkMemoPage = () => {
   const [inputText, setInputText] = useState("");
 
   const handleAddContent = () => {
-    const newContent = {
-      // id: contents.length + 1,
-      id: 1,
-      text: inputText,
-      color: "pink",
-    };
+    const request = { content: inputText, background: 0 };
 
-    // request 구성
-    const request = { content: inputText };
+    const client = axios.create({
+      method: "post",
+      headers: {
+        "Access-Control-Allow-Origin": `http://localhost:3000/`,
+      },
+    });
 
-    // 지금 CORS 오류 나는 상태 -> 해결 필요
-    axios
-      .post("http://43.201.176.26:8080/api/letter/write", request)
+    client
+      .post("/api/letter/write", request)
       .then((res) => console.log(res.data));
 
     setInputText("");

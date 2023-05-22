@@ -15,7 +15,7 @@ import BlueMemoPage from "./pages/GuestbookPage/BlueMemoPage.js";
 import YellowMemoPage from "./pages/GuestbookPage/YellowMemoPage.js";
 import PurpleMemoPage from "./pages/GuestbookPage/PurpleMemoPage.js";
 import BrownMemoPage from "./pages/GuestbookPage/BrownMemoPage.js";
-
+// import GuestbookWritingPage from "./pages/GuestbookPage/GuestbookWritingPage";
 
 function App() {
   return (
@@ -27,13 +27,14 @@ function App() {
           <Route path="/developers" element={<DevelopersPage />} />
           <Route path="/nbti" element={<NbtiPage />} />
           <Route path="/guest" element={<GuestbookPage />} />
-          <Route path="/pinkmemo" element={<PinkMemoPage/>} />
-          <Route path="/yellowmemo" element={<YellowMemoPage/>} />
-          <Route path="/greenmemo" element={<GreenMemoPage/>} />
-          <Route path="/bluememo" element={<BlueMemoPage/>} />
-          <Route path="/purplememo" element={<PurpleMemoPage/>} />
-          <Route path="/brownmemo" element={<BrownMemoPage/>} />
-          <Route path="/writing" element={<WritingPage/>} />
+          <Route path="/pinkmemo" element={<PinkMemoPage />} />
+          <Route path="/yellowmemo" element={<YellowMemoPage />} />
+          <Route path="/greenmemo" element={<GreenMemoPage />} />
+          <Route path="/bluememo" element={<BlueMemoPage />} />
+          <Route path="/purplememo" element={<PurpleMemoPage />} />
+          <Route path="/brownmemo" element={<BrownMemoPage />} />
+          <Route path="/writing" element={<WritingPage />} />
+          {/* <Route path="/writing" element={<GuestbookWritingPage />} /> */}
           <Route path="/nbti/test" element={<NbtiTestPage />} />
           <Route path="/nbti/test/result" element={<NbtiResult />} />
         </Routes>

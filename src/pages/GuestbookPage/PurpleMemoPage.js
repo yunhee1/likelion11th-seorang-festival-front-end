@@ -1,26 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import WritingNav from "../../components/WritingNav";
 import ".//../../css/guestbook-page.scss";
 import { Link } from "react-router-dom";
 import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton.svg";
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
 import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
-import initialContent from "./Content";
+import axios from "axios";
 
 const PurpleMemoPage = () => {
   const [inputCount, setInputCount] = useState(0);
-
-  const [contents, setContents] = useState(initialContent);
   const [inputText, setInputText] = useState("");
 
   const handleAddContent = () => {
-    const newContent = {
-      id: contents.length + 1,
-      text: inputText,
-      color: "purple",
-    };
+    const request = { content: inputText, background: 4 };
 
-    setContents([...contents, newContent]);
+    const client = axios.create({
+      method: "post",
+      headers: {
+        "Access-Control-Allow-Origin": `http://localhost:3000/`,
+      },
+    });
+
+    client
+      .post("/api/letter/write", request)
+      .then((res) => console.log(res.data));
+
     setInputText("");
   };
 
@@ -28,10 +32,6 @@ const PurpleMemoPage = () => {
     setInputCount(e.target.value.length);
     setInputText(e.target.value);
   };
-
-  useEffect(() => {
-    console.log(contents);
-  }, [contents]);
 
   return (
     <div className="container">

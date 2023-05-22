@@ -5,22 +5,26 @@ import { Link } from "react-router-dom";
 import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton.svg";
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
 import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
-import initialContent from "./Content";
+import axios from "axios";
 
 const GreenMemoPage = () => {
   const [inputCount, setInputCount] = useState(0);
-
-  const [contents, setContents] = useState(initialContent);
   const [inputText, setInputText] = useState("");
 
   const handleAddContent = () => {
-    const newContent = {
-      id: contents.length + 1,
-      text: inputText,
-      color: "green",
-    };
+    const request = { content: inputText, background: 2 };
 
-    setContents([...contents, newContent]);
+    const client = axios.create({
+      method: "post",
+      headers: {
+        "Access-Control-Allow-Origin": `http://localhost:3000/`,
+      },
+    });
+
+    client
+      .post("/api/letter/write", request)
+      .then((res) => console.log(res.data));
+
     setInputText("");
   };
 
