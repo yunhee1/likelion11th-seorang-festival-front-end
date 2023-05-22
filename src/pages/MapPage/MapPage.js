@@ -1,12 +1,12 @@
 import React, { useCallback, useState, useEffect } from "react";
 import Nav from "../../components/Nav";
-import { ReactComponent as BoothMap } from "../../images/MapPage/booth_map.svg";
 import "../../css/map-page.scss";
 import Booths from "./BoothData";
 import BoothsDate from "./BoothDateData";
 import BoothList from "./BoothList";
 import { useSearchParams } from "react-router-dom";
 import classNames from "classnames";
+import boothMap from "../../images/MapPage/booth_map.png";
 
 const MapPage = () => {
   const [booths, setBooths] = useState(Booths);
@@ -44,7 +44,7 @@ const MapPage = () => {
     <div className="container">
       <Nav location="map" />
       <div className="map-container">
-        <BoothMap className="booth-map-img" />
+        <img src={boothMap} alt="부스 지도" className="booth-map-img" />
       </div>
       <div className="scroll-container">
         <div className="day-filter-container">

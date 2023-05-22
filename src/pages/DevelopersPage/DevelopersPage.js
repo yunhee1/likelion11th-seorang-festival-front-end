@@ -96,8 +96,8 @@ const DeveloperPage = () => {
                 <InstagramLogo className="item" />
               </a>
               <p className="footer-text">
-                멋사 <br />
-                인스타그램
+                멋쟁이 사자처럼 <br />
+                Instagram
               </p>
             </div>
             <div className="item-container">
@@ -109,8 +109,8 @@ const DeveloperPage = () => {
                 <HomepageLogo className="item" />
               </a>
               <p className="footer-text">
-                멋사 <br />
-                홈페이지
+                멋쟁이 사자처럼 <br />
+                Homepage
               </p>
             </div>
           </div>
