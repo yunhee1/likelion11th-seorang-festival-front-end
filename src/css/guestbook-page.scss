@@ -69,6 +69,10 @@
     padding-bottom:15px;
 }
 
+.pink-ear{
+    background-image:url("../images/GuestbookPage/pink_ear.svg")
+}
+
 .backbtn-container{
     width: 50px;
     height: 50px;
@@ -76,7 +80,7 @@
 }
 
 .textbox{
-    padding: 10px;
+    padding: 10px 20px;
     margin-top:90px;
     margin-bottom:16px;
     border:none;
@@ -107,7 +111,7 @@
     margin-right: 25px;
     margin-top: 12px;
     background-color: #FFFFFF7D;
-    padding: 10px 0px;
+    padding: 40px 0px 10px;
     border-radius: 16px;
     min-height: 90vh;
 }
@@ -170,11 +174,14 @@ h2{
 li{
     cursor: pointer;
     background-color:#FFD9EB;
-    padding: 20px;
+    padding-top:50px;
+    padding-bottom: 20px;
+    padding-right:10px;
+    padding-left: 10px;
     margin-left: 32px;
     margin-right:32px;
     margin-bottom:30px;
-    margin-top: 30px;
+    // margin-top: 30px;
     border-radius: 10px;
     list-style: none;
     font-family: "Jua";
@@ -206,4 +213,19 @@ li{
 button{
     border:none;
     background: none;
+}
+
+.list-wrapper{
+    position:relative;
+    .ear{
+        position:absolute;
+        top: 2px;
+        left:90px;
+        // bottom: 1rem;
+        margin-top:-35px;
+        margin-bottom:0;
+        margin-right:auto;
+        margin-left:auto;
+        padding:0;
+    }
 }
