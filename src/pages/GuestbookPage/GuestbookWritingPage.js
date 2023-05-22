@@ -24,10 +24,10 @@ const GuestbookWritingPage = () => {
     setMemoBg(num);
   };
 
-  const onChangeHandler = (e) => {
-    setInputCount(e.target.value.length);
-    setInputText(e.target.value);
-  };
+  // const onChangeHandler = (e) => {
+  //   setInputCount(e.target.value.length);
+  //   setInputText(e.target.value.slice(0,maxLength));
+  // };
 
   return (
     <div className="container">
