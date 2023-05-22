@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Jua";
+    src: url(../fonts/BMJUA_ttf.ttf);
+}
+
 // 전체 배경
 .background {
     height: 100%;
@@ -17,5 +22,8 @@
 .container {
     margin: 0 auto;
     text-align: center;
+    p {
+        font-family: "Jua";
+    }
 }
 
