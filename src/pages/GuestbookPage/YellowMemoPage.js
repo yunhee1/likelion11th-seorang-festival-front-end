@@ -30,9 +30,13 @@ const YellowMemoPage = () => {
   };
 
   const onChangeHandler = (e) => {
+    if(e.target.value.length > 100) {
+      e.target.value = e.target.value.slice(0, 100);
+    }
     setInputCount(e.target.value.length);
-    setInputText(e.target.value);
+    setInputText(e.target.value.slice(0,100));
   };
+
 
   return (
     <div className="container">

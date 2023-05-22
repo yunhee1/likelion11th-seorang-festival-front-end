@@ -17,7 +17,7 @@ const DeveloperPage = () => {
         <span className="title">
           서울여자대학교 개발동아리
           <br />
-          멋쟁이 사자처럼
+          멋쟁이사자처럼
         </span>
         <div className="likelion-swu-desc">
           <img
@@ -96,7 +96,7 @@ const DeveloperPage = () => {
                 <InstagramLogo className="item" />
               </a>
               <p className="footer-text">
-                멋쟁이 사자처럼 <br />
+                멋쟁이사자처럼 <br />
                 Instagram
               </p>
             </div>
@@ -109,7 +109,7 @@ const DeveloperPage = () => {
                 <HomepageLogo className="item" />
               </a>
               <p className="footer-text">
-                멋쟁이 사자처럼 <br />
+                멋쟁이사자처럼 <br />
                 Homepage
               </p>
             </div>
