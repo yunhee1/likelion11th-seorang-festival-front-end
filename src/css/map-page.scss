@@ -4,9 +4,15 @@
 }
 
 .map-container {
+    position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+@keyframes ani{
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(0, 4px);}
+ }  
 
 .booth-map-img {
     width: 347px;
@@ -52,14 +58,18 @@
 
         .day {
             font-size: 15px;
+            margin: 0;
+            font-family: 'Patua', cursive;
         }
         
         .dayOfWeek {
             font-size: 25px;
             margin: 0 0 4px 0;
+            font-family: 'Patua', cursive;
         }
 
         hr, .underline {
+            transition: all 0.2s ease-in-out;
             margin: 0;
             padding: 0;
             width: 82px;

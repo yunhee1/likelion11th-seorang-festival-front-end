@@ -12,7 +12,6 @@ const YellowMemoPage = () => {
   const [inputText, setInputText] = useState("");
 
   const handleAddContent = () => {
-    // request 구성
     const request = { content: inputText, background: 1 };
 
     const client = axios.create({

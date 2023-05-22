@@ -23,7 +23,6 @@ const NbtiResult = () => {
 
   const [result, setResult] = useState();
 
-  // 이게 맞나 ...
   useEffect(() => {
     setTimeout(() => {
       setLoading1(true);
@@ -76,7 +75,7 @@ const NbtiResult = () => {
 
   const location = useLocation();
 
-  const baseUrl = "baseurl"; // 추후 수정 필요
+  const baseUrl = "https://re-seorang.swygbro.com";
 
   const handleCopyClipBoard = async (text) => {
     try {
