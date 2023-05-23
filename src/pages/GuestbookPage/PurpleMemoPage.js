@@ -15,6 +15,7 @@ const PurpleMemoPage = () => {
     const request = { content: inputText, background: 4 };
 
     const client = axios.create({
+      baseURL: "http://43.201.176.26:8080",
       method: "post",
       headers: {
         "Access-Control-Allow-Origin": `http://localhost:3000/`,
@@ -29,13 +30,12 @@ const PurpleMemoPage = () => {
   };
 
   const onChangeHandler = (e) => {
-    if(e.target.value.length > 100) {
+    if (e.target.value.length > 100) {
       e.target.value = e.target.value.slice(0, 100);
     }
     setInputCount(e.target.value.length);
-    setInputText(e.target.value.slice(0,100));
+    setInputText(e.target.value.slice(0, 100));
   };
-
 
   return (
     <div className="container">
