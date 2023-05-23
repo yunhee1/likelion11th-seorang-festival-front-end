@@ -14,13 +14,13 @@ const PinkMemoPage = () => {
   const handleAddContent = () => {
     const request = { content: inputText, background: 0 };
 
-    const host =
-      window.location.hostname === "localhost"
-        ? "http://43.201.176.26:8080"
-        : "api";
+    // const host =
+    //   window.location.hostname === "localhost"
+    //     ? "http://43.201.176.26:8080"
+    //     : "api";
 
     const client = axios.create({
-      baseURL: host,
+      baseURL: "http://43.201.176.26:8080/api/*",
       method: "post",
       headers: {
         "Access-Control-Allow-Origin": `http://localhost:3000/`,
