@@ -4,7 +4,7 @@ import ContentList from "./ContentList";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Nav from "../../components/Nav";
-import plusBtn from "../../images/GuestbookPage/plus_btn.png";
+import { ReactComponent as PlusBtn } from "../../images/GuestbookPage/plusbtn.svg";
 
 export function handleAddContent() {}
 const GuestbookPage = () => {
@@ -33,21 +33,19 @@ const GuestbookPage = () => {
         <div className="guestbook-container">
           <p className="guest-title">지금까지 {visitNum} 발자국이 찍혔어요!</p>
           <div className="content-container">
+          <div className='plusbtn-container'>
+              <Link to="/writing">
+                <PlusBtn />
+              </Link>
+            </div>
             <div className="memo">
+
               <div>
                 <ContentList contents={content} />
               </div>
             </div>
 
-            <div>
-              <Link to="/writing">
-                <img
-                  src={plusBtn}
-                  className="plus-btn"
-                  alt="게시글 작성 버튼"
-                />
-              </Link>
-            </div>
+
           </div>
         </div>
       ) : (
