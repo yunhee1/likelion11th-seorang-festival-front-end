@@ -43,16 +43,31 @@ const NbtiTestPage = () => {
       <div className="container">
         <div className="test-question-container">
           <div className="question-text-container">
-            <p className="question-text">{questions[questionId].question}</p>
+            {questions[questionId].question.split("\n").map((line) => (
+              <p className="question-text">
+                {line}
+                <br />
+              </p>
+            ))}
           </div>
         </div>
         <div className={classNames("question-illust", `q${questionId + 1}`)} />
         <div className="answer-container">
           <p className="answer" onClick={() => onClick(0)}>
-            {questions[questionId].answers[0].answer}
+            {questions[questionId].answers[0].answer.split("\n").map((line) => (
+              <p className="answer-text">
+                {line}
+                <br />
+              </p>
+            ))}
           </p>
           <p className="answer" onClick={() => onClick(1)}>
-            {questions[questionId].answers[1].answer}
+            {questions[questionId].answers[1].answer.split("\n").map((line) => (
+              <p className="answer-text">
+                {line}
+                <br />
+              </p>
+            ))}
           </p>
         </div>
         <p className="question-count">{questionId + 1}/11</p>
