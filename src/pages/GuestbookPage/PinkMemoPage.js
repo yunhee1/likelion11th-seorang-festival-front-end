@@ -21,6 +21,10 @@ const PinkMemoPage = () => {
 
     const client = axios.create({
       baseURL: "http://43.201.176.26:8080",
+      proxy: {
+        host: "127.0.0.1",
+        port: 3000,
+      },
       method: "post",
       headers: {
         "Access-Control-Allow-Origin": `http://localhost:3000/`,
