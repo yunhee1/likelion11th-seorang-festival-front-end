@@ -20,7 +20,7 @@ const PinkMemoPage = () => {
     //     : "api";
 
     const client = axios.create({
-      baseURL: "http://43.201.176.26:8080/api/*",
+      // baseURL: "http://43.201.176.26:8080",
       method: "post",
       headers: {
         "Access-Control-Allow-Origin": `http://localhost:3000/`,
