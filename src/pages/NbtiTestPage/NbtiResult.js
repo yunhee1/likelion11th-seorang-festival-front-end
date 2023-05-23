@@ -109,27 +109,52 @@ const NbtiResult = () => {
         <div
           className={classNames("feature-container", "feature1", `id${result}`)}
         >
-          <p>{Result[result].feature.feat_1}</p>
+          {Result[result].feature.feat_1.split("\n").map((line) => (
+            <p>
+              {line}
+              <br />
+            </p>
+          ))}
         </div>
         <div
           className={classNames("feature-container", "feature2", `id${result}`)}
         >
-          <p>{Result[result].feature.feat_2}</p>
+          {Result[result].feature.feat_2.split("\n").map((line) => (
+            <p>
+              {line}
+              <br />
+            </p>
+          ))}
         </div>
         <div
           className={classNames("feature-container", "feature3", `id${result}`)}
         >
-          <p>{Result[result].feature.feat_3}</p>
+          {Result[result].feature.feat_3.split("\n").map((line) => (
+            <p>
+              {line}
+              <br />
+            </p>
+          ))}
         </div>
         <div
           className={classNames("feature-container", "feature4", `id${result}`)}
         >
-          <p>{Result[result].feature.feat_4}</p>
+          {Result[result].feature.feat_4.split("\n").map((line) => (
+            <p>
+              {line}
+              <br />
+            </p>
+          ))}
         </div>
         <div
           className={classNames("feature-container", "feature5", `id${result}`)}
         >
-          <p>{Result[result].feature.feat_5}</p>
+          {Result[result].feature.feat_5.split("\n").map((line) => (
+            <p>
+              {line}
+              <br />
+            </p>
+          ))}
         </div>
       </div>
       <div className="buttons-container">
