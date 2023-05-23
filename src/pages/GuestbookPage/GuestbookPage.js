@@ -12,7 +12,7 @@ const GuestbookPage = () => {
   const [visitNum, setVisitNum] = useState();
 
   useEffect(() => {
-    API.get("/letter").then((res) => {
+    API.get(process.env.REACT_APP_DB_HOST + "/api/letter").then((res) => {
       setContent(res.data.letters);
       setVisitNum(res.data.total);
     });
