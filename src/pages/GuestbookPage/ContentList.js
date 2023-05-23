@@ -10,7 +10,7 @@ function ContentList({ contents }) {
   return (
     <div>
       {contents.map((content) => {
-        if (content.background === 1) {
+        if (content.background === 0) {
           return (
             <div className="list-wrapper" key={content.id}>
               <div className="ear">
@@ -19,7 +19,7 @@ function ContentList({ contents }) {
               <li style={{ backgroundColor: "#FFD9EB" }}>{content.content}</li>
             </div>
           );
-        } else if (content.background === 2) {
+        } else if (content.background === 1) {
           return (
             <div className="list-wrapper" key={content.id}>
               <div className="head">
@@ -28,7 +28,7 @@ function ContentList({ contents }) {
               <li style={{ backgroundColor: "#FFE8AA" }}>{content.content}</li>
             </div>
           );
-        } else if (content.background === 3) {
+        } else if (content.background === 2) {
           return (
             <div className="list-wrapper" key={content.id}>
               <div className="ear">
@@ -37,7 +37,7 @@ function ContentList({ contents }) {
               <li style={{ backgroundColor: "#E2F9D8" }}>{content.content}</li>
             </div>
           );
-        } else if (content.background === 4) {
+        } else if (content.background === 3) {
           return (
             <div className="list-wrapper" key={content.id}>
               <div className="head">
@@ -46,7 +46,7 @@ function ContentList({ contents }) {
               <li style={{ backgroundColor: "#D3F5FA" }}>{content.content}</li>
             </div>
           );
-        } else if (content.background === 5) {
+        } else if (content.background === 4) {
           return (
             <div className="list-wrapper" key={content.id}>
               <div className="ear">
