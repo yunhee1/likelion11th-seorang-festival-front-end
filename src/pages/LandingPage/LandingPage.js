@@ -309,7 +309,7 @@ const LandingPage = () => {
                 <InstagramLogo className="item-logo" />
               </a>
               <p className="footer-text">
-                멋쟁이 사자처럼 <br />
+                멋쟁이사자처럼 <br />
                 Instagram
               </p>
             </div>
@@ -322,7 +322,7 @@ const LandingPage = () => {
                 <HomepageLogo className="item-logo" />
               </a>
               <p className="footer-text">
-                멋쟁이 사자처럼 <br />
+                멋쟁이사자처럼 <br />
                 Homepage
               </p>
             </div>
