@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton.svg";
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
 import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
-import axios from "axios";
+import API from "../../utils/API";
 
 const PurpleMemoPage = () => {
   const [inputCount, setInputCount] = useState(0);
@@ -14,17 +14,9 @@ const PurpleMemoPage = () => {
   const handleAddContent = () => {
     const request = { content: inputText, background: 4 };
 
-    const client = axios.create({
-      baseURL: "http://43.201.176.26:8080",
-      method: "post",
-      headers: {
-        "Access-Control-Allow-Origin": `http://localhost:3000/`,
-      },
-    });
-
-    client
-      .post("/api/letter/write", request)
-      .then((res) => console.log(res.data));
+    API.post("/letter/write", request)
+      .then((resolve) => console.log(resolve))
+      .then((err) => console.log(err));
 
     setInputText("");
   };

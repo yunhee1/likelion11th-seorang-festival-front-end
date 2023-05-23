@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as PostBtn } from "../../images/GuestbookPage/postbutton.svg";
 import { ReactComponent as Backbtn } from "../../images/GuestbookPage/backbutton.svg";
 import { ReactComponent as WritingTitle } from "../../images/GuestbookPage/writingtitle.svg";
-import axios from "axios";
+import API from "../../utils/API";
 
 const GreenMemoPage = () => {
   const [inputCount, setInputCount] = useState(0);
@@ -14,28 +14,20 @@ const GreenMemoPage = () => {
   const handleAddContent = () => {
     const request = { content: inputText, background: 2 };
 
-    const client = axios.create({
-      method: "post",
-      headers: {
-        "Access-Control-Allow-Origin": `http://localhost:3000/`,
-      },
-    });
-
-    client
-      .post("/api/letter/write", request)
-      .then((res) => console.log(res.data));
+    API.post("/letter/write", request)
+      .then((resolve) => console.log(resolve))
+      .then((err) => console.log(err));
 
     setInputText("");
   };
 
   const onChangeHandler = (e) => {
-    if(e.target.value.length > 100) {
+    if (e.target.value.length > 100) {
       e.target.value = e.target.value.slice(0, 100);
     }
     setInputCount(e.target.value.length);
-    setInputText(e.target.value.slice(0,100));
+    setInputText(e.target.value.slice(0, 100));
   };
-
 
   return (
     <div className="container">
