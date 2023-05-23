@@ -53,7 +53,7 @@
         margin-right: 25px;
         margin-top: 30px;
         background-color: #FFFFFF7D;
-        padding: 35px 45px;
+        padding: 35px 35px;
         border-radius: 16px;
         line-height: 1.5rem;
 
@@ -63,7 +63,7 @@
             .date-container {
                 background-color: #FFF6D6;
                 border-radius: 16px;
-                padding: 5px 15px 3px 15px;
+                padding: 5px 15px;
                 text-shadow: none;
                 color: black;
                 font-family: "Jua";
@@ -115,41 +115,48 @@ p {
 .detail-view-btn{
     background-image:url('../images/LandingPage/detail_view_icon.svg');
     background-repeat: no-repeat;
+    position: relative;
+    top: 2px;
+    left: 1px;
+    z-index: 1;
 }
 
-// .modal{
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     background-color: pink;
-//     opacity: 20%;
-//     justify-content: center;
-//     align-items: center;
-// }
+@keyframes modalShow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes modalHidden {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+    // animation: modalShow 0.3s linear;
   }
 
 .hidden {
     display: none;
   }
 
-//   .md_overlay {
-//     background: #F5F5F5;
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
   .md_overlay {
     background: rgba(0, 0, 0, 0.25);
     width: 100%;
@@ -161,37 +168,32 @@ p {
   }
 
 .md_content {
-    width: 350px;
-    height: 600px;
-    overflow-wrap:normal;
-    padding-left: 10px;
-    padding-right:10px;
-    display:center;
+    margin: 0 auto;
+    min-width: 290px;
+    width: 290px;
+    overflow-wrap: normal;
+    padding: 0 20px;
     position: fixed;
-    bottom: 5rem;
-    background-color: #FFF6D6;;
-    border-radius: 5px;
-    animation: slidein 2s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF6D6;
+    border-radius: 15px;
+    z-index: 2;
   }
   
   .md_content > p {
-    position:flex;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding-top:1rem;
-    padding-left:8px;
-    padding-right:8px;
-    padding-bottom: 3rem;
-    width: 300px;
-    height: 400px;
+    margin: 20px auto 30px auto;
+    min-width: 250px;
+    padding: 30px 20px;
     background-color: #FFFFFF;
-    border-radius:10px;
-    font-weight: 700;
+    border-radius: 15px;
+    font-weight: normal;
     font-size: 15px;
     line-height: 22px;
     color: #7a7a7a;
   }
+  
   .md_content > h3 {
     font-family: "Jua";
     padding-top:20px;
@@ -200,18 +202,13 @@ p {
     font-weight: 700;
     font-size: 30px;
     line-height: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 14px;
   }
 
-  .closebtn-container{
-    position:relative;
-    padding-top:5px;
-    align-items:flex-end;
-    .md_close{
-        position:absolute;
-        right:15px;
-    }
-
-  }
-
+.md_close{
+    position:absolute;
+    right:15px;
+    top: 10px;
+    z-index: 2;
+}
