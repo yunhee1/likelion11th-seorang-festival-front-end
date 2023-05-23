@@ -3,7 +3,7 @@ import "../../css/guestbook-page.scss";
 import ContentList from "./ContentList";
 import { Link } from "react-router-dom";
 import Nav from "../../components/Nav";
-import plusBtn from "../../images/GuestbookPage/plus_btn.png";
+import PlusBtn from "../../images/GuestbookPage/plus_btn.png";
 import API from "../../utils/API";
 
 export function handleAddContent() {}
@@ -27,7 +27,7 @@ const GuestbookPage = () => {
             지금까지 {visitNum}개의 발자국이 찍혔어요!
           </p>
           <div className="content-container">
-          <div className='plusbtn-container'>
+            <div className="plusbtn-container">
               <Link to="/writing">
                 <PlusBtn />
               </Link>
@@ -37,8 +37,6 @@ const GuestbookPage = () => {
                 <ContentList contents={content} />
               </div>
             </div>
-
-
           </div>
         </div>
       ) : (
