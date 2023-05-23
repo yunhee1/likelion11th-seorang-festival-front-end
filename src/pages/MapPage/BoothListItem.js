@@ -21,7 +21,12 @@ const BoothListItem = ({ booth, onToggle }) => {
           />
           <p className="location-text">{location}</p>
         </div>
-        <p className="booth-description">{desc}</p>
+        {desc.split("\n").map((line) => (
+          <p className="booth-description">
+            {line}
+            <br className="booth-list-item-br" />
+          </p>
+        ))}
       </div>
     </div>
   );

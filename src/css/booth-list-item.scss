@@ -50,6 +50,7 @@
 
 .booth-location-container {
     display: flex;
+    padding-bottom: 3px;
 
     p {
         margin: 0;
@@ -60,7 +61,12 @@
 
 .booth-description {
     text-align: left;
+    margin: 5px 0;
     padding-left: 2px;
+
+    br:last-child {
+        display: none;
+    }
 }
 
 .selected-booth {
