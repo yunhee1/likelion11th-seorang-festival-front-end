@@ -1,11 +1,11 @@
 import React from "react";
 import "../../css/landing-page.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { ReactComponent as MainTitle } from "../../images/LandingPage/main_title.svg";
 import { ReactComponent as SubTitle } from "../../images/LandingPage/sub_title.svg";
 import { ReactComponent as Date } from "../../images/LandingPage/date.svg";
-import { ReactComponent as WriteButton } from "../../images/LandingPage/write_button.svg";
-import { ReactComponent as ViewButton } from "../../images/LandingPage/view_button.svg";
+// import { ReactComponent as WriteButton } from "../../images/LandingPage/write_button.svg";
+// import { ReactComponent as ViewButton } from "../../images/LandingPage/view_button.svg";
 import { ReactComponent as PaperBoard } from "../../images/LandingPage/paper_board.svg";
 import { ReactComponent as Introduction } from "../../images/LandingPage/section01_title.svg";
 import { ReactComponent as Schedule } from "../../images/LandingPage/section02_title.svg";
@@ -107,17 +107,17 @@ const LandingPage = () => {
       </div>
 
       <div className="board">
-        <Link to="/guest">
-          <PaperBoard />
-        </Link>
-        <div className="button-container">
+        {/* <Link to="/guest"> */}
+        <PaperBoard />
+        {/* </Link> */}
+        {/* <div className="button-container">
           <Link to="/guest">
             <ViewButton />
           </Link>
           <Link to="/writing">
             <WriteButton />
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="section">
