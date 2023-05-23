@@ -10,7 +10,7 @@
 
 .pink-memo-container{
     margin: 0 15px 20px 15px;
-    background-image: url("../images/GuestbookPage/PinkMemo.svg");
+    background-image: url("../images/GuestbookPage/pinkmemo.png") !important;
     background-repeat: no-repeat;
     background-size:contain;
     padding-bottom:15px;
@@ -18,7 +18,7 @@
 
 .yellow-memo-container{
     margin: 18px 15px 20px 15px;
-    background-image: url("../images/GuestbookPage/YellowMemo.svg");
+    background-image: url("../images/GuestbookPage/yellowmemo.png");
     background-repeat: no-repeat;
     background-size:contain;
     padding-bottom:15px;
@@ -26,7 +26,7 @@
 
 .green-memo-container{
     margin: 0 15px 20px 15px;
-    background-image: url("../images/GuestbookPage/GreenMemo.svg");
+    background-image: url("../images/GuestbookPage/greenmemo.png");
     background-repeat: no-repeat;
     background-size:contain;
     padding-bottom:15px;
@@ -34,7 +34,7 @@
 
 .blue-memo-container{
     margin: 18px 15px 20px 15px;
-    background-image: url("../images/GuestbookPage/bluememo.svg");
+    background-image: url("../images/GuestbookPage/bluememo.png");
     background-repeat: no-repeat;
     background-size:contain;
     padding-bottom:15px;
@@ -42,7 +42,7 @@
 
 .purple-memo-container{
     margin: 0 15px 20px 15px;
-    background-image: url("../images/GuestbookPage/purplememo.svg");
+    background-image: url("../images/GuestbookPage/purplememo.png");
     background-repeat: no-repeat;
     background-size:contain;
     padding-bottom:15px;
@@ -50,7 +50,7 @@
 
 .brown-memo-container{
     margin: 18px 15px 20px 15px;
-    background-image: url("../images/GuestbookPage/BrownMemo.svg");
+    background-image: url("../images/GuestbookPage/brownmemo.png");
     background-repeat: no-repeat;
     background-size:contain;
     padding-bottom:15px;
@@ -93,7 +93,7 @@
     outline: none;
   }
 
-.content-container {
+  .content-container {
     position: relative;
     margin-left: 25px;
     margin-right: 25px;
@@ -102,8 +102,14 @@
     padding-top: 45px;
     border-radius: 16px;
     min-height: 90vh;
-}
 
+    .plusbtn-container{
+        position:fixed;
+        padding: 400px 13rem;
+        width:100px;
+        z-index: 3;
+    }
+}
 .btn-container{
     border-radius:30%;
 }
@@ -189,6 +195,14 @@ li{
     margin-top: 37px;
 }
 
+.plusBtn-container {
+    position:fixed;
+    width:100px;
+    height:100px;
+    right:40px;
+    top:200px;
+
+}
 //게시물 추가 버튼
 .plus-btn {
     position: fixed;
