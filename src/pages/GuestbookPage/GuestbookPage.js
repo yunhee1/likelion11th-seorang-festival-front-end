@@ -39,7 +39,6 @@ const GuestbookPage = () => {
               </Link>
             </div>
             <div className="memo">
-
               <div>
                 <ContentList contents={content} />
               </div>
