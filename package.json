@@ -2,6 +2,7 @@
   "name": "seorang",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://43.201.176.26:8080/api",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",

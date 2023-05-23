@@ -218,13 +218,15 @@ const LandingPage = () => {
             <span className="date-container">5월 25일(목)</span>
             <p className="timetable-content">
               11:00-17:00 <br />
-              ㅤ플리마켓 &lt;pleasu:re&gt;               <button
+              ㅤ플리마켓 &lt;pleasu:re&gt;{" "}
+              <button
                 className="detail-view-btn"
                 value="플리마켓"
                 onClick={onClickMarket}
               >
                 ㅤ
-              </button><br />
+              </button>
+              <br />
               오프라인 부스 &lt;re:member&gt;
             </p>
             <p className="timetable-content">
@@ -309,7 +311,7 @@ const LandingPage = () => {
                 <InstagramLogo className="item-logo" />
               </a>
               <p className="footer-text">
-                멋쟁이 사자처럼 <br />
+                멋쟁이사자처럼 <br />
                 Instagram
               </p>
             </div>
@@ -322,7 +324,7 @@ const LandingPage = () => {
                 <HomepageLogo className="item-logo" />
               </a>
               <p className="footer-text">
-                멋쟁이 사자처럼 <br />
+                멋쟁이사자처럼 <br />
                 Homepage
               </p>
             </div>
