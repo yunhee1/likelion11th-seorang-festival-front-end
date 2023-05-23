@@ -7,7 +7,7 @@ import classNames from "classnames";
 import Nav from "../../components/Nav";
 import { ReactComponent as Restart } from "../../images/NbtiResultPage/test_restart.svg";
 import { ReactComponent as Sharing } from "../../images/NbtiResultPage/result_sharing.svg";
-import { Link, useSearchParams, useLocation } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Result from "../NbtiTestPage/NbtiResultData";
 
 const NbtiResult = () => {
@@ -72,8 +72,6 @@ const NbtiResult = () => {
       }, 1000);
     }, 1000);
   }, [params]);
-
-  const location = useLocation();
 
   const baseUrl = "https://re-seorang.swygbro.com";
 
@@ -140,11 +138,7 @@ const NbtiResult = () => {
         </Link>
         <Sharing
           className="result-button"
-          onClick={() =>
-            handleCopyClipBoard(
-              `${baseUrl}${location.pathname}${location.search}`
-            )
-          }
+          onClick={() => handleCopyClipBoard(`${baseUrl}`)}
         />
       </div>
     </div>
