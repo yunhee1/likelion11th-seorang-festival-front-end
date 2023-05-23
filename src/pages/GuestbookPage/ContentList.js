@@ -10,90 +10,62 @@ function ContentList({ contents }) {
   return (
     <div>
       {contents.map((content) => {
-        
-        if (content.background === 1){
+        if (content.background === 1) {
           return (
-            <div className='list-wrapper'>
+            <div className="list-wrapper" key={content.id}>
               <div className="ear">
-              <img src={PinkEar}/>
+                <img src={PinkEar} alt="PinkEar" />
               </div>
-              <li 
-            key={content.id}
-            style={{backgroundColor:"#FFD9EB"}}
-            >
-              {content.content}</li>
+              <li style={{ backgroundColor: "#FFD9EB" }}>{content.content}</li>
             </div>
           );
-          
-        } else if(content.background === 2){
+        } else if (content.background === 2) {
           return (
-            <div className='list-wrapper'>
+            <div className="list-wrapper" key={content.id}>
               <div className="head">
-              <img src={YellowHead}/>
+                <img src={YellowHead} alt="YellowHead" />
               </div>
-              <li 
-            key={content.id}
-            style={{backgroundColor:"#FFE8AA"}}
-            >
-              {content.content}</li>
+              <li style={{ backgroundColor: "#FFE8AA" }}>{content.content}</li>
             </div>
           );
-         
-        } else if(content.background === 3){
+        } else if (content.background === 3) {
           return (
-            <div className='list-wrapper'>
+            <div className="list-wrapper" key={content.id}>
               <div className="ear">
-              <img src={GreenEar}/>
+                <img src={GreenEar} alt="GreenEar" />
               </div>
-              <li 
-            key={content.id}
-            style={{backgroundColor:"#E2F9D8"}}
-            >
-              {content.content}</li>
+              <li style={{ backgroundColor: "#E2F9D8" }}>{content.content}</li>
             </div>
           );
-        } 
-        else if(content.background === 4){
+        } else if (content.background === 4) {
           return (
-            <div className='list-wrapper'>
-            <div className="head">
-            <img src={BlueHead}/>
-            </div>
-            <li 
-          key={content.id}
-          style={{backgroundColor:"#D3F5FA"}}
-          >
-            {content.content}</li>
-          </div>
-          );
-        } else if(content.background === 5){
-            return (
-              <div className='list-wrapper'>
-                <div className="ear">
-                <img src={PurpleEar}/>
-                </div>
-                <li 
-              key={content.id}
-              style={{backgroundColor:"#E5DCFF"}}
-              >
-                {content.content}</li>
+            <div className="list-wrapper" key={content.id}>
+              <div className="head">
+                <img src={BlueHead} alt="BlueHead" />
               </div>
-            );
-        } else{
-          return (
-            <div className='list-wrapper'>
-            <div className="head">
-            <img src={BrownHead}/>
+              <li style={{ backgroundColor: "#D3F5FA" }}>{content.content}</li>
             </div>
-            <li 
-          key={content.id}
-          style={{backgroundColor:"#E4D6C1"}}
-          >
-            {content.content}</li>
-          </div>
           );
-          }}
-      )}
+        } else if (content.background === 5) {
+          return (
+            <div className="list-wrapper" key={content.id}>
+              <div className="ear">
+                <img src={PurpleEar} alt="PurpleEar" />
+              </div>
+              <li style={{ backgroundColor: "#E5DCFF" }}>{content.content}</li>
+            </div>
+          );
+        } else {
+          return (
+            <div className="list-wrapper" key={content.id}>
+              <div className="head">
+                <img src={BrownHead} alt="BrownHead" />
+              </div>
+              <li style={{ backgroundColor: "#E4D6C1" }}>{content.content}</li>
+            </div>
+          );
+        }
+      })}
     </div>
   );
 }
