@@ -27,21 +27,18 @@ const GuestbookPage = () => {
             지금까지 {visitNum}개의 발자국이 찍혔어요!
           </p>
           <div className="content-container">
+          <div className='plusbtn-container'>
+              <Link to="/writing">
+                <PlusBtn />
+              </Link>
+            </div>
             <div className="memo">
               <div>
                 <ContentList contents={content} />
               </div>
             </div>
 
-            <div>
-              <Link to="/writing">
-                <img
-                  src={plusBtn}
-                  className="plus-btn"
-                  alt="게시글 작성 버튼"
-                />
-              </Link>
-            </div>
+
           </div>
         </div>
       ) : (
