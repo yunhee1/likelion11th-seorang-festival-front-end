@@ -218,13 +218,15 @@ const LandingPage = () => {
             <span className="date-container">5월 25일(목)</span>
             <p className="timetable-content">
               11:00-17:00 <br />
-              ㅤ플리마켓 &lt;pleasu:re&gt;               <button
+              ㅤ플리마켓 &lt;pleasu:re&gt;{" "}
+              <button
                 className="detail-view-btn"
                 value="플리마켓"
                 onClick={onClickMarket}
               >
                 ㅤ
-              </button><br />
+              </button>
+              <br />
               오프라인 부스 &lt;re:member&gt;
             </p>
             <p className="timetable-content">
